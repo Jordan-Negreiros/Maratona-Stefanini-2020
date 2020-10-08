@@ -1,14 +1,30 @@
 (function () {
     "use strict";
+    /**
+     *  O use strict define que toda as variaveis tenham que ser declaradas,
+     *  para que nenhuma assuma contexto global acidentalmente;
+     *  ou seja
+     * 
+     * NON strict-mode
+     * variavel = "string";     // virou global
+     * 
+     * USE strict-mode
+     * var variavel = "string";  // local ou global
+     * 
+     */
 
     // PRECISAMOS SELECIONAR O ELEMENTO PARA PODER DIZER ONDE VAI FICAR A APLICAÇÃO
     var div1 = document.getElementById('app1');
     var div2 = document.getElementById('app2');
     
     // APLICAÇÃO 1
+    // O primeiro parametro da funcao controller('controlador', **) tem que ser o mesmo que eh referenciado
+    // no ng-controller no index.html
     angular
     .module('app1', [])
     .controller('controlador1', function ($scope) {
+        // Recebe a variavel do scope que referencia a pagina index.html. Entao tudo q foi criado 
+        // la via diretivas(ng-click,bind e outros) vem como um objeto atraves dessa variavel.
         $scope.nome = 'Jordan';
     });
 

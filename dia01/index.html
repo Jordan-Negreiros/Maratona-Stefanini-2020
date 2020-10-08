@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="app" lang="en">
+<!-- ng-app: Declara um elemento como o elemento raiz da aplicação, ocasionando a mudança do comportamento padrão da tag.
+    A diretiva ng-app diz ao AngularJS que o elemento <div> é o "proprietário" de um aplicativo AngularJS.-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,9 +10,12 @@
 </head>
 <body>
     <div id="app1">
-        <div ng-controller="controlador1">
+        <div ng-controller="controlador1"> <!-- ng-controller: Especifica um controller JavaScript para aquele HTML em questão.-->
             <h1>Olá {{ nome }}</h1>
+            <!-- <h1 ng-bind="nome"></h1 --> <!-- A diretriz ng-bind liga o innerHTML do elemento <h1> ao nome da variável da aplicação -->
             <input type="text" ng-model="nome" placeholder="Enter a name here">
+            <!-- ng-model: É similar ao ng-bind, mas permite ligação direta bidirecional (two-way data binding ) entre a view e o escopo do aplicativo. 
+                A diretriz do modelo ng-model vincula o valor do campo de entrada ao nome da variável da aplicação.-->
         </div>
         <br>
         <br>
@@ -22,8 +27,8 @@
     <div id="app2">
         <div ng-controller="controlador2">
             <h1>Contador: {{ contador }}</h1>
-            <button ng-click="contador = contador + 1;">ADD + 1</button>
-            <button ng-click="contador = contador - 1;">SUB - 1</button>
+            <button ng-click="contador = contador + 1;">ADD + 1</button> <!-- ng-click: Permite instanciar o evento de click, semelhante ao onclick.-->
+            <button ng-click="contador = contador - 1;">SUB - 1</button> <!-- ng-init="count=0" define um valor padrao para a variavel em questao.-->
         </div>
     </div>
 
