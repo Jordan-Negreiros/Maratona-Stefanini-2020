@@ -2,7 +2,5 @@
     "use strict";
 
     // MODULO
-    angular.module('listaComprasApp', ['ngRoute']);
-
-    
+    angular.module("listaComprasApp", ["ngRoute"]);
 })();
