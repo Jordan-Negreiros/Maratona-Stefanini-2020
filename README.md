@@ -48,3 +48,14 @@
     - Integração com Back-End (API)
     - Diretivas
     - Componentes
+  
+### Dia 05
+    Criando teste para o app Lista de Compras e Final da semana Angular JS
+
+    - Diretivas
+    - Componentes
+    - Testes
+    - Jasmine
+    - Karma
+
+    
